@@ -57,7 +57,7 @@ jobs:
           #          if minor == int(dev_python_minor):
           #              # The range trick above doesn't work for threaded builds, so we'll
           #              # just be stuck with last prerelease until we update dev_python_minor.
-          #              configs.append((f"3.{minor}t-dev", f"py3{minor}"))
+          #              configs.append((f"3.{minor}t-dev - 3.{minor}t", f"py3{minor}"))
           #          else:
           #              configs.append((f"3.{minor}t", f"py3{minor}"))
           #    # Early versions of 3.10 and 3.11 had different deprecation
@@ -84,7 +84,7 @@ jobs:
             tox_env: py313-full
           - python: '3.14.0-dev - 3.14'
             tox_env: py314
-          - python: '3.14t-dev'
+          - python: '3.14t-dev - 3.14t'
             tox_env: py314
           - python: '3.10.8'
             tox_env: py310-full
