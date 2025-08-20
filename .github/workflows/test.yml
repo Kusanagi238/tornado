@@ -77,7 +77,7 @@ jobs:
             tox_env: py312-full
           - python: '3.13'
             tox_env: py313-full
-          - python: '3.14-dev'
+          - python: '3.14-dev - 3.14'
             tox_env: py314
           - python: '3.14t-dev'
             tox_env: py314
