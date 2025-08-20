@@ -55,7 +55,9 @@ jobs:
           #          configs.append((f"3.{minor}", f"py3{minor}-full"))
           #      if int(min_python_threaded_minor) <= minor <= int(max_python_threaded_minor):
           #          if minor == int(dev_python_minor):
-          #              configs.append((f"3.{minor}.0t-dev - 3.{minor}t", f"py3{minor}"))
+          #              # The range trick above doesn't work for threaded builds, so we'll
+          #              # just be stuck with last prerelease until we update dev_python_minor.
+          #              configs.append((f"3.{minor}.0t-dev", f"py3{minor}"))
           #          else:
           #              configs.append((f"3.{minor}t", f"py3{minor}"))
           #    # Early versions of 3.10 and 3.11 had different deprecation
