@@ -47,13 +47,13 @@ jobs:
           #    configs  = []
           #    for minor in range(int(min_python_minor), int(max_python_minor) + 1):
           #      if minor == int(dev_python_minor):
-          #          version = f"3.{minor}-dev - 3.{minor}"
+          #          version = f"3.{minor}-dev"
           #      else:
           #          version = f"3.{minor}"
           #      configs.append((version, f"py3{minor}-full"))
           #    for minor in range(int(min_python_threaded_minor), int(max_python_threaded_minor) + 1):
           #        if minor == int(dev_python_minor):
-          #            version = f"3.{minor}t-dev - 3.{minor}t"
+          #            version = f"3.{minor}t-dev"
           #        else:
           #            version = f"3.{minor}t"
           #        configs.append((version, f"py3{minor}-full"))
