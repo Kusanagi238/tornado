@@ -47,12 +47,15 @@ jobs:
           #    configs  = []
           #    for minor in range(int(min_python_minor), int(max_python_minor) + 1):
           #      if minor == int(dev_python_minor):
+          #          # For python versions in development, specify a range so we install
+          #          # a final version if available, otherwise a prerelease.
+          #          # The .0 is necessary here for unclear reasons.
           #          configs.append((f"3.{minor}.0-dev - 3.{minor}", f"py3{minor}"))
           #      else:
           #          configs.append((f"3.{minor}", f"py3{minor}-full"))
           #      if int(min_python_threaded_minor) <= minor <= int(max_python_threaded_minor):
           #          if minor == int(dev_python_minor):
-          #              configs.append((f"3.{minor}t-dev", f"py3{minor}"))
+          #              configs.append((f"3.{minor}.0t-dev - 3.{minor}t", f"py3{minor}"))
           #          else:
           #              configs.append((f"3.{minor}t", f"py3{minor}"))
           #    # Early versions of 3.10 and 3.11 had different deprecation
@@ -79,7 +82,7 @@ jobs:
             tox_env: py313-full
           - python: '3.14.0-dev - 3.14'
             tox_env: py314
-          - python: '3.14t-dev'
+          - python: '3.14.0t-dev - 3.14t'
             tox_env: py314
           - python: '3.10.8'
             tox_env: py310-full
